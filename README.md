@@ -1,27 +1,15 @@
-# ClientesApp
+Este projeto foi desenvolvido com Spring Boot, utilizado o Lombok para criar os Getters e Setters.
+Utilizando banco de dados PostgreSQL.
+Para o FrontEnd foi utilizado o Angular 9 com Bootstrap.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+Para inicializar o projeto na sua máquina é necessário executar o comando npm install e em seguida o npm start.
 
-## Development server
+Neste projeto é possível cadastrar clientes, onde contém os campos nome, CPF, endereço, telefone. É possível cadastrar quantos endereços e telefones necessários e definir um endereço como principal.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+É possível executar os procedimentos de cadastrar, alterar e deletar tanto dos clientes quanto no endereço e telefone.
 
-## Code scaffolding
+Ao inserir o CPF, deverá ser um CPF válido e a aplicação não vai aceitar CPF duplicado;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Java versão 8
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Node versão 16.13.2
