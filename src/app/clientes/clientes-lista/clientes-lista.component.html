@@ -1,0 +1,52 @@
+<div class="container">
+
+  <h2 class="mt-4">Clientes</h2>
+  <br/>
+
+  <button class="btn btn-success" routerLink="/clientes/criar" type="button">
+    Novo
+  </button>
+
+  <br/>
+  <br/>
+
+  <div class="row">
+    <div *ngIf="mensagem" class="alert alert-warning" role="alert">
+      {{ mensagem }}
+    </div>
+
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Opções</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.id }}</td>
+          <td>{{ cliente.nome }}</td>
+          <td>{{ cliente.cpf }}</td>
+          <td>
+            <button class="btn btn-outline-secondary mr-2"
+                    routerLink="/clientes/editar/{{ cliente.id }}">
+              <i class="fa fa-pen-square"></i>
+            </button>
+
+            <button (click)="deletar(cliente)"
+                    class="btn btn-outline-danger"
+                    data-target="#modalSelecao"
+                    data-toggle="modal">
+              <i class="fa fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
